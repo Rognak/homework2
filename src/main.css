@@ -1,0 +1,119 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/clouds.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(161,219,233)
+}
+
+a {
+    border: 1px solid #333; 
+    display: inline-block;
+    padding: 10px 15px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none; 
+    color: #000; 
+    width: 50px;
+  }
+a:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); 
+    background: linear-gradient(to bottom, #fcfff4, #e9e9ce); 
+    color: #a00;
+   }
+
+
+
+ul {
+    text-align: center;
+}
+
+ul li {
+    position: relative;
+    display: none;
+}
+
+h1 {
+	font-family: Verdana;
+	font-size: 2.5em;
+	font-weight: bold;
+	text-align: center;
+	color: #FFFFFF;
+	text-shadow:
+		0 1px 0 #CCCCCC,
+		0 2px 0 #C9C9C9,
+		0 3px 0 #BBBBBB,
+		0 4px 0 #B9B9B9,
+		0 5px 0 #AAAAAA,
+		0 6px 1px rgba(0,0,0,.1),
+		0 0 5px rgba(0,0,0,.1),
+		0 1px 3px rgba(0,0,0,.3),
+		0 3px 5px rgba(0,0,0,.2),
+		0 5px 10px rgba(0,0,0,.25),
+		0 10px 10px rgba(0,0,0,.2),
+		0 20px 20px rgba(0,0,0,.15);
+}
+
+
+header {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+}
+
+#btn {
+    width: 15em;
+    font-size: 80%;
+    color: rgba(255,255,255,.9);
+    text-shadow: #2e7ebd 0 1px 2px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.1;
+    white-space: pre-line;
+    padding: .7em 0;
+    border: 1px solid;
+    border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+    border-radius: 6px;
+    outline: none;
+    background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
+    box-shadow: inset rgba(255,255,255,.5) 1px 1px;
+  }
+#btn:first-line{
+    font-size: 170%;
+    font-weight: 700;
+  }
+#btn13:hover {
+    color: rgb(255,255,255);
+    background-image: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
+  }
+#btn13:active {
+    color: rgb(255,255,255);
+    border-color: #2970a9;
+    background-image: linear-gradient(#5796c8, #6aa2ce);
+    box-shadow: none;
+  }
+
+#tabs {
+    position: relative;
+    display: none;
+    margin: 0px;
+    margin-left: 10%;
+    margin-top: 40px;
+    width: 80%;
+    background-color: white;
+    padding: 0;
+}
+
+#chartContainer1 {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    display: table;
+    margin: 0 auto;
+}
+

@@ -5,7 +5,7 @@ module.exports = {
 	mode: "development",
 
 	entry: {
-		index: ['./src/index.js']
+		index: ['./src/weather.js']
 	},
 
 	output: {
@@ -26,7 +26,14 @@ module.exports = {
 						}
 					}
 				]
-			}
+			},
+			{
+				test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+			},
+			{
+				test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+				loader: 'url-loader?limit=100000' }
 		]
 	},
 
@@ -44,22 +51,22 @@ module.exports = {
 		compress: true,
 		port: 9999,
 		proxy: [
-			{
-				context: ["/www.ecb.europa.eu/"],
-				target: 'https://www.ecb.europa.eu',
-				changeOrigin: true,
-				pathRewrite: {
-					'/www\\.ecb\\.europa\\.eu' : ''
-				}
-			}
-			// {
-			// 	context: ["/xml.meteoservice.ru/"],
-			// 	target: 'https://xml.meteoservice.ru',
-			// 	changeOrigin: true,
-			// 	pathRewrite: {
-			// 		'/xml\\.meteoservice\\.ru' : ''
-			// 	},
-			// }
+			//{
+				//context: ["/www.ecb.europa.eu/"],
+				//target: 'https://www.ecb.europa.eu',
+				//changeOrigin: true,
+				//pathRewrite: {
+					//'/www\\.ecb\\.europa\\.eu' : ''
+				//}
+			//}
+			 {
+			 	context: ["/xml.meteoservice.ru/"],
+			 	target: 'https://xml.meteoservice.ru',
+			 	changeOrigin: true,
+			 	pathRewrite: {
+			 		'/xml\\.meteoservice\\.ru' : ''
+			 	}
+			 }
 		]
 	}
 };

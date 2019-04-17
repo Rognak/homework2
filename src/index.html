@@ -5,12 +5,24 @@
     <title>My Graph</title>
 </head>
 <body>
+    <header>
+        <h1>Данные по погоде</h1>
 
-    <h1>Валюта</h1>
-    <button id="btn">Загрузить</button>
-    <div>
-        <canvas id="out"></canvas>
+        <button id="btn">Загрузить</button>
+    </header>
+    <div id="tabs" style="height: 360px">
+        <ul>
+            <li ><a id='max' href="#tabs-1" style="font-size: 12px">Max</a></li>
+            <li ><a id='min' href="#tabs-2"  style="font-size: 12px">Min</a></li>
+        </ul>
+
+        <div id="tab1">
+            <div id="chartContainer1">
+                <canvas id="temperature"></canvas>
+                <canvas id="pressure"></canvas>
+                <canvas id="wet"></canvas>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
