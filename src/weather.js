@@ -51,8 +51,6 @@ function setChartConfig(elem_id, elem_type) {
                   "Минимальная влажность, %"
                 ];
 
-    let datas = [max_temps, min_temps, heat_max, heat_min, p_max, p_min];
-
     if (elem_id == 'max' && elem_type == 'T') {
         gText = "Комбинированный график зависимости максимальной температуры и по ощущениям";
         dataset = [
@@ -171,7 +169,7 @@ async function loadData() {
 
     //извлекаем прогнозы
     const forecasts = parsedData.querySelectorAll("FORECAST")
-    console.log(forecasts)
+    //console.log(forecasts)
 
     for (let i = 0; i < forecasts.length; i++) {
         //Создаем ось Х (даты)
@@ -180,8 +178,7 @@ async function loadData() {
         const mounth = correctDate(forecast.getAttribute("month"));
         const day = correctDate(forecast.getAttribute("day"));
         const hour = correctDate(forecast.getAttribute("hour"));
-        var date = new Date(year, mounth, day, hour);
-        var newdate = date.getFullYear() + "/" + date.getMonth() + "/" + date.getDate() + "  " + date.getHours()+':00';
+        var newdate = year + "/" + mounth + "/" + day + "  " + hour+':00';
 
         dates[i] = (newdate)
         //console.log(dates);
@@ -199,7 +196,7 @@ async function loadData() {
         wet_min[i] = (forecast.childNodes["9"].getAttribute("min"));
       }
     
-    console.log(p_max)
+    //console.log(p_max)
 }
 
 const buttonBuild = document.getElementById("btn");
@@ -222,7 +219,7 @@ buttonBuild.addEventListener("click", async function() {
     }
 
     let t_max = document.getElementById('max');
-    console.log(t_max.id);
+    //console.log(t_max.id);
     let t_min = document.getElementById('min');
 
 
